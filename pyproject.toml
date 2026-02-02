@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lassa-transmission-pipeline"
+version = "0.1.0"
+description = "Python pipeline to simulate Lassa fever dynamics under climate and ecological scenarios"
+authors = [
+  { name = "Emmanuel Benyeogor", email = "chidemannie@users.noreply.github.com" }
+]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+
+dependencies = [
+  "numpy",
+  "pandas",
+  "scipy",
+  "matplotlib",
+  "xarray",
+  "netcdf4",
+  "scikit-learn",
+  "tqdm"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

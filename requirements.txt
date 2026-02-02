@@ -1,0 +1,12 @@
+numpy
+pandas
+scipy
+matplotlib
+xarray
+netcdf4
+scikit-learn
+jupyter
+tqdm
+pytest
+ruff
+black

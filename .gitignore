@@ -205,3 +205,11 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+# virtual env
+.venv/
+
+# generated outputs (except curated examples)
+outputs/
+
+# OS
+.DS_Store

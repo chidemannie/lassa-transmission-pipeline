@@ -53,7 +53,20 @@ Raw surveillance data are **not included** in this repository and must be obtain
 
 ---
 
-### 2. Climate Data (ERA5)
+### 2. Administrative boundaries
+
+State-level aggregation of climate variables uses the GADM v4.1 Nigeria
+administrative boundary shapefile (level 1).
+
+The shapefile is used only during preprocessing to spatially aggregate
+ERA5 gridded climate data to Nigerian states. No shapefile data are
+required for downstream analysis or modeling.
+
+Source:
+GADM – Global Administrative Areas  
+https://gadm.org
+
+### 3. Climate Data (ERA5)
 
 Climate variables are derived from the **ERA5 reanalysis dataset** produced by the European Centre for Medium-Range Weather Forecasts (ECMWF), accessed via the Copernicus Climate Data Store.
 

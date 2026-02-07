@@ -127,6 +127,17 @@ The pipeline produces:
 - a **balanced state–week panel** suitable for statistical modeling  
 - lagged climate features for early warning analysis  
 
+### SEIR Transmission Dynamics
+
+The figure below compares baseline SEIR dynamics with climate-informed transmission,
+illustrating how environmental variability modifies epidemic timing and magnitude.
+
+![SEIR baseline vs climate-informed model](reports/figures/seir_baseline_vs_climate.png)
+
+*Figure 2. Comparison of baseline and climate-informed SEIR model outputs for Lassa fever.
+Climate forcing alters transmission intensity and temporal dynamics relative to the
+baseline model.*
+
 Final modeling-ready datasets are written to:
 data/processed/model/
 

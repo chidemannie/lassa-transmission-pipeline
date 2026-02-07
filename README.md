@@ -51,6 +51,12 @@ This repository is intended for use by researchers, public health practitioners,
 
 ---
 
+## Climate-informed SEIR illustration
+
+I implemented a parsimonious susceptible–exposed–infectious–recovered (SEIR) transmission model to illustrate how environmental variability may modulate underlying transmission potential for Lassa fever. The model was run at weekly resolution and parameterised to generate relative transmission intensity rather than absolute case counts. Two configurations were compared: a baseline SEIR model without environmental forcing and a climate-modulated variant in which transmission parameters were allowed to vary as a function of aggregated climatic inputs. Model outputs were not calibrated to observed surveillance data and should not be interpreted as predictive fits. Instead, the SEIR signals represent latent transmission pressure, while observed case counts reflect additional layers of stochastic zoonotic spillover, healthcare and household amplification, reporting delays, and surveillance capacity. Observed incidence was therefore linearly scaled to facilitate comparison of temporal structure only. This illustrative comparison motivates subsequent formal modelling and hypothesis testing of climate–health linkages within the broader transmission pipeline (Figure 1).
+
+---
+
 ## Data Inputs
 
 ### 1. Lassa Fever Surveillance Data
@@ -120,26 +126,38 @@ Each component serves a distinct role:
 
 ## Key Outputs
 
-The pipeline produces:
-
-- weekly, state-level Lassa fever case counts  
-- weekly, state-level climate summaries (rainfall and temperature)  
-- a **balanced state–week panel** suitable for statistical modeling  
-- lagged climate features for early warning analysis  
-
-### SEIR Transmission Dynamics
-
-The figure below compares baseline SEIR dynamics with climate-informed transmission,
-illustrating how environmental variability modifies epidemic timing and magnitude.
+### Climate-Informed SEIR Transmission Dynamics
+To illustrate how environmental variability may modulate underlying transmission
+potential, we compare a baseline SEIR model with a climate-modulated SEIR signal.
 
 ![SEIR baseline vs climate-informed model](reports/figures/seir_baseline_vs_climate.png)
 
-*Figure 2. Comparison of baseline and climate-informed SEIR model outputs for Lassa fever.
-Climate forcing alters transmission intensity and temporal dynamics relative to the
-baseline model.*
+*Figure 2. Observed Lassa incidence (scaled) compared with baseline and climate-modulated
+SEIR transmission signals at weekly resolution. SEIR outputs represent relative
+transmission intensity rather than fitted case counts, while observed data reflect
+surveillance- and reporting-shaped incidence. The comparison is illustrative and is
+intended to motivate formal modelling rather than serve as model validation.*
 
-Final modeling-ready datasets are written to:
-data/processed/model/
+### Seasonal validation: climate–incidence phase alignment
+
+*Figure 3. Evaluates whether the climate-modulated transmission signal aligns with the **seasonal timing** of observed Lassa fever incidence, without fitting the model to surveillance data.
+
+![Seasonal phase alignment between observed Lassa incidence and climate-modulated transmission signal](reports/figures/fig_validation_seasonal_phase_alignment.png)
+
+---
+
+### Data-Driven Epidemic Signals
+
+Additional figures derived directly from surveillance data examine observed incidence
+patterns and inferred transmission dynamics over time, providing empirical grounding
+for the conceptual and mechanistic components above.
+
+(Figures 3–5: observed incidence, Rt dynamics, scenario projections, and sensitivity
+analyses; see `notebooks/` and `reports/figures/`.)
+
+### Climate-Modulated Transmission Proxy
+
+A derived climate-modulated transmission proxy from standardized weekly rainfall and temperature to assess seasonal phase alignment; this signal is not fitted to incidence data.
 
 ---
 
@@ -168,7 +186,7 @@ The design enables future extensions toward **probabilistic forecasting**, **sce
 
 ---
 
-## GitHub Justification (for Reviewers)
+## Why GitHub
 
 This GitHub repository provides a transparent, reproducible implementation of a climate–health data integration pipeline for Lassa fever in Nigeria. By separating raw data access from scripted processing and analysis, the repository enables independent verification, reuse, and extension while respecting data governance constraints. The structure, documentation, and modular design align with best practices for open, reproducible research and support translation from retrospective analysis to forward-looking early warning applications.
 

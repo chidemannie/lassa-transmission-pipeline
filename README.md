@@ -27,6 +27,18 @@ Understanding how **lagged climate signals** relate to human cases is critical f
 
 ---
 
+## Conceptual Framework
+
+This repository is structured around a systems-based conceptual model of Lassa fever
+that links climate variability, land-use change, rodent reservoir ecology, zoonotic
+spillover, secondary human-to-human transmission, and surveillance processes.
+
+![Conceptual transmission pipeline for Lassa fever](reports/figures/fig1_pipeline_dag_refs.png)
+
+*Figure 1. Conceptual transmission pipeline for Lassa fever. The framework synthesises
+published evidence on climate and land-use drivers of rodent ecology, zoonotic spillover,
+secondary transmission, and surveillance-related reporting bias.*
+
 ## Repository Purpose
 
 The purpose of this repository is to provide a **transparent, end-to-end analytical pipeline** that integrates epidemiological surveillance data with climate reanalysis data to:
